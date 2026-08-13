@@ -144,8 +144,8 @@
 
   - COIN_FORCE_AGL: set to "1" to prefer using the old AGL bindings over CGL.
     Note that AGL is not available on 64-bit systems. The AGL code is not
-    compiled into Coin by default, but must be enabled at configure-time using
-    --enable-agl in addition to using the environment variable.
+    compiled into Coin by default; enable it with -DCOIN_BUILD_MAC_AGL=ON
+    in addition to using the environment variable.
 */
 
 
@@ -190,11 +190,11 @@
 
 // *************************************************************************
 
-/* The configure script should protect against more than one of
+/* The build configuration should protect against more than one of
    (HAVE_WGL), (HAVE_EGL or HAVE_GLX) and (HAVE_AGL or HAVE_CGL) being defined at the same time, but
    we set up this little trip-wire in addition, just in case someone
    is either fiddling manually with config.h, or in case a change is
-   made which breaks this protection in the configure script. */
+   made which breaks this protection in the build configuration. */
 
 #if defined(HAVE_WGL)
 #  define GRAPHICS_API_WGL_COUNT 1

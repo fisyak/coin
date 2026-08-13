@@ -173,8 +173,8 @@ fcglue_init(void)
 #ifdef FONTCONFIG_RUNTIME_LINKING
     {
       int idx;
-      /* FIXME: should we get the system shared library name from an
-         Autoconf check? 20000930 mortene. */
+      /* FIXME: should we get the system shared library name from a
+         build-configuration check? 20000930 mortene. */
       const char * possiblelibnames[] = {
         NULL, /* is set below */
         "fontconfig", "libfontconfig", "libfontconfig.so",
@@ -352,8 +352,8 @@ ftglue_init(void)
 #ifdef FREETYPE_RUNTIME_LINKING
     {
       int idx;
-      /* FIXME: should we get the system shared library name from an
-         Autoconf check? 20000930 mortene. */
+      /* FIXME: should we get the system shared library name from a
+         build-configuration check? 20000930 mortene. */
       const char * possiblelibnames[] = {
         NULL, /* is set below */
         "freetype", "libfreetype", "libfreetype.so",

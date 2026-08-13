@@ -5,7 +5,3 @@ templant
 
 coin.el
     - Emacs Lisp functions to aid misc operations on the Coin code
-
-Legacy CVS, Autotools, and generated-documentation helpers were removed
-when the project moved to Git and CMake. The remaining scripts are
-development helpers and are not required for a normal CMake build.

@@ -1406,7 +1406,7 @@ SoDB::removeProgressCallback(ProgressCallbackType * func, void * userdata)
 
 /*!
   Returns \c TRUE if this is a thread safe version of Coin
-  (i.e. it was configured and built with --enable-threadsafe).
+  (i.e. it was configured and built with -DCOIN_THREADSAFE=ON).
 */
 SbBool
 SoDB::isMultiThread(void)

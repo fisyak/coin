@@ -124,12 +124,11 @@ Options:
 END_OF_USAGE
 }
 
-# print CVS version
+# print tool version
 sub PrintVersion { #########################################################
-    print '$Id$', "\n";
+    print "$0 (development version)\n";
 }
 
 ############################################################################
-
 
 

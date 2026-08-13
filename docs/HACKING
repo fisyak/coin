@@ -208,8 +208,6 @@ There are many, many ways to break ABI compatibility in C++:
         * If we are a subtype of SoBase, update the correct files for
           initializing the class (i.e. src/nodes/SoNode.cpp).
 
-        * Add the source files to the corresponding all.cpp file.
-
         * Add the header file to the corresponding common include file
           (i.e. include/Inventor/nodes/SoNodes.h)
 

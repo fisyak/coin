@@ -59,8 +59,8 @@ protected:
   void computeBBox(SoAction * action, SbBox3f & box, SbVec3f & center) override;
 
   SbBool generateDefaultNormals(SoState *, SoNormalCache * nc) override;
-  virtual SbBool generateDefaultNormals(SoState * state,
-                                        SoNormalBundle * bundle) override;
+  SbBool generateDefaultNormals(SoState * state,
+                                SoNormalBundle * bundle) override;
 
 private:
   enum Binding {

@@ -47,8 +47,8 @@ public:
 
   SbProjector * copy(void) const override;
   SbVec3f project(const SbVec2f & point) override;
-  virtual SbRotation getRotation(const SbVec3f & point1,
-                                 const SbVec3f & point2) override;
+  SbRotation getRotation(const SbVec3f & point1,
+                         const SbVec3f & point2) override;
 
 protected:
   SbRotation getRotation(const SbVec3f & point1, const SbBool tol1,

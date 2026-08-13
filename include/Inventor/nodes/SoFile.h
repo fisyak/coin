@@ -64,8 +64,8 @@ public:
 
   SoGroup * copyChildren(void) const;
   SoChildList * getChildren(void) const override;
-  virtual void copyContents(const SoFieldContainer * from,
-                            SbBool copyconnections) override;
+  void copyContents(const SoFieldContainer * from,
+                    SbBool copyconnections) override;
 
   const SbString & getFullName(void) const;
 

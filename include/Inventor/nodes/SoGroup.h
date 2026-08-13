@@ -79,15 +79,15 @@ protected:
   SbBool readInstance(SoInput * in, unsigned short flags) override;
   virtual SbBool readChildren(SoInput * in);
 
-  virtual void copyContents(const SoFieldContainer * from,
-			    SbBool copyconnections) override;
+  void copyContents(const SoFieldContainer * from,
+                    SbBool copyconnections) override;
 
   SoNotRec createNotRec(void) override;
 
   void setOperation(const SoNotRec::OperationType opType = SoNotRec::UNSPECIFIED,
-		    const SoNode * cc = NULL,
-		    const SoNode * pc = NULL,
-		    const int ci = -1);
+                    const SoNode * cc = NULL,
+                    const SoNode * pc = NULL,
+                    const int ci = -1);
 
   SoChildList * children;
 

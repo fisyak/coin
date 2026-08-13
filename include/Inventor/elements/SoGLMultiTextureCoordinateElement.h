@@ -50,15 +50,14 @@ protected:
 public:
   void init(SoState * state) override;
   void push(SoState * state) override;
-  virtual void pop(SoState * state,
-                   const SoElement * prevTopElement) override;
+  void pop(SoState * state, const SoElement * prevTopElement) override;
 
-  static  void setTexGen(SoState * const state, SoNode * const node,
-                         const int unit,
-                         SoTexCoordTexgenCB * const texgenFunc,
-                         void * const texgenData = NULL,
-                         SoTextureCoordinateFunctionCB * const func = NULL,
-                         void * const funcData = NULL);
+  static void setTexGen(SoState * const state, SoNode * const node,
+                        const int unit,
+                        SoTexCoordTexgenCB * const texgenFunc,
+                        void * const texgenData = NULL,
+                        SoTextureCoordinateFunctionCB * const func = NULL,
+                        void * const funcData = NULL);
 
   CoordType getType(const int unit = 0) const override;
 

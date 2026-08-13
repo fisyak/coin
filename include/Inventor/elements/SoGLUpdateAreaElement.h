@@ -49,8 +49,7 @@ protected:
 public:
   void init(SoState * state) override;
   void push(SoState * state) override;
-  virtual void pop(SoState * state,
-                   const SoElement * prevTopElement) override;
+  void pop(SoState * state, const SoElement * prevTopElement) override;
 
   SbBool matches(const SoElement * element) const override;
   SoElement * copyMatchInfo() const override;

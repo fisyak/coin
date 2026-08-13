@@ -62,8 +62,8 @@ public:
   void doAction(SoAction * action) override;
   void GLRender(SoGLRenderAction * action) override;
   void write(SoWriteAction * action) override;
-  virtual void copyContents(const SoFieldContainer * from, 
-                            SbBool copyconnections) override;
+  void copyContents(const SoFieldContainer * from, 
+                    SbBool copyconnections) override;
   void notify(SoNotList * l) override;
 
 protected:

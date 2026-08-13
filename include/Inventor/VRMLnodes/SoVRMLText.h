@@ -71,8 +71,8 @@ public:
 protected:
   virtual ~SoVRMLText();
 
-  virtual void computeBBox(SoAction * action,
-                            SbBox3f & box, SbVec3f & center) override;
+  void computeBBox(SoAction * action,
+                   SbBox3f & box, SbVec3f & center) override;
   void generatePrimitives(SoAction * action) override;
   SoChildList * children;
 

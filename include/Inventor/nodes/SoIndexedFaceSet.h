@@ -54,10 +54,10 @@ public:
   void GLRender(SoGLRenderAction * action) override;
   void getPrimitiveCount(SoGetPrimitiveCountAction * action) override;
 
-  virtual SbBool generateDefaultNormals(SoState * state,
-                                        SoNormalBundle * bundle) override;
-  virtual SbBool generateDefaultNormals(SoState * state,
-                                        SoNormalCache * cache) override;
+  SbBool generateDefaultNormals(SoState * state,
+                                SoNormalBundle * bundle) override;
+  SbBool generateDefaultNormals(SoState * state,
+                                SoNormalCache * cache) override;
 
 protected:
   virtual ~SoIndexedFaceSet();

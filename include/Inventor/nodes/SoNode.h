@@ -121,10 +121,9 @@ public:
 
   void writeInstance(SoOutput * out) override;
   virtual SoNode * addToCopyDict(void) const;
-  virtual void copyContents(const SoFieldContainer * from,
-                            SbBool copyconnections) override;
+  void copyContents(const SoFieldContainer * from,
+                    SbBool copyconnections) override;
   SoFieldContainer * copyThroughConnection(void) const override;
-
 
   static SoType getClassTypeId(void);
   static SoNode * getByName(const SbName & name);

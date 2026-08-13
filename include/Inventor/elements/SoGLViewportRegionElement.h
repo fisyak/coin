@@ -47,8 +47,7 @@ protected:
 public:
   void init(SoState * state) override;
   void push(SoState * state) override;
-  virtual void pop(SoState * state,
-                   const SoElement * prevTopElement) override;
+  void pop(SoState * state, const SoElement * prevTopElement) override;
 
 protected:
   void setElt(const SbViewportRegion & viewportRegion) override;

@@ -49,8 +49,8 @@ public:
 protected:
   virtual ~SoGLDepthBufferElement();
 
-  virtual void setElt(SbBool test, SbBool write,
-                      DepthWriteFunction function, SbVec2f range) override;
+  void setElt(SbBool test, SbBool write,
+              DepthWriteFunction function, SbVec2f range) override;
 
 private:
   void updategl(void) const;

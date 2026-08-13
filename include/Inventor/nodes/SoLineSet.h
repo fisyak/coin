@@ -61,8 +61,8 @@ protected:
 
 private:
   SbBool generateDefaultNormals(SoState *, SoNormalCache * nc) override;
-  virtual SbBool generateDefaultNormals(SoState * state,
-                                        SoNormalBundle * bundle) override;
+  SbBool generateDefaultNormals(SoState * state,
+                                SoNormalBundle * bundle) override;
 
   enum Binding {
     OVERALL = 0,

@@ -86,8 +86,8 @@ public:
 
 protected:
   virtual ~SoInteractionKit();
-  virtual void copyContents(const SoFieldContainer *fromFC,
-                            SbBool copyConnections) override;
+  void copyContents(const SoFieldContainer *fromFC,
+                    SbBool copyConnections) override;
 
   SbBool setPart(const int partNum, SoNode *node) override;
   SbBool readInstance(SoInput *in, unsigned short flags) override;

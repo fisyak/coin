@@ -49,8 +49,7 @@ protected:
 public:
   void init(SoState * state) override;
   void push(SoState * state) override;
-  virtual void pop(SoState * state,
-                   const SoElement * prevTopElement) override;
+  void pop(SoState * state, const SoElement * prevTopElement) override;
 
   void multElt(const int unit, const SbMatrix & matrix) override;
   void setElt(const int unit, const SbMatrix & matrix) override;

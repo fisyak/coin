@@ -48,7 +48,7 @@ public:
   static void cleanClass(void);
 
   ScXMLExecutableElt(void);
-  ~ScXMLExecutableElt(void) override;
+  virtual ~ScXMLExecutableElt(void);
 
   void copyContents(const ScXMLElt * rhs) override;
 

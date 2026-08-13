@@ -48,8 +48,7 @@ public:
   void init(SoState * state) override;
 
   void push(SoState * state) override;
-  virtual void pop(SoState * state,
-                   const SoElement * prevTopElement) override;
+  void pop(SoState * state, const SoElement * prevTopElement) override;
 
   static int32_t increment(SoState * const state, SoNode * const node);
   static int32_t increment(SoState * const state);

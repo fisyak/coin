@@ -48,8 +48,8 @@ public:
 
   SbProjector * copy(void) const override;
   SbVec3f project(const SbVec2f & point) override;
-  virtual SbRotation getRotation(const SbVec3f & point1,
-                                 const SbVec3f & point2) override;
+  SbRotation getRotation(const SbVec3f & point1,
+                         const SbVec3f & point2) override;
   void setTolerance(const float edgetol);
   float getTolerance(void) const;
   void setRadialFactor(const float rad = 0.0f);

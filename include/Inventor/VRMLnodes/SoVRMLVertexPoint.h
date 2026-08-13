@@ -64,8 +64,8 @@ protected:
   virtual ~SoVRMLVertexPoint();
 
   SbBool shouldGLRender(SoGLRenderAction * action) override;
-  virtual void computeBBox(SoAction * action, SbBox3f & box,
-                           SbVec3f & center) override;
+  void computeBBox(SoAction * action, SbBox3f & box,
+                   SbVec3f & center) override;
 }; // class SoVRMLVertexPoint
 
 #endif // ! COIN_SOVRMLVERTEXPOINT_H

@@ -99,14 +99,14 @@ public:
     uint32_t reserved[4];
   };
 
-  virtual void setDiffuseElt(SoNode*,  int32_t numcolors,
-                             const SbColor * colors, SoColorPacker * packer) override;
-  virtual void setPackedElt(SoNode * node, int32_t numcolors,
-                            const uint32_t * colors, const SbBool packedtransparency) override;
-  virtual void setColorIndexElt(SoNode * node, int32_t numindices,
-                                const int32_t * indices) override;
-  virtual void setTranspElt(SoNode * node, int32_t numtransp,
-                            const float * transp, SoColorPacker * packer) override;
+  void setDiffuseElt(SoNode*, int32_t numcolors,
+                     const SbColor * colors, SoColorPacker * packer) override;
+  void setPackedElt(SoNode * node, int32_t numcolors,
+                    const uint32_t * colors, const SbBool packedtransparency) override;
+  void setColorIndexElt(SoNode * node, int32_t numindices,
+                        const int32_t * indices) override;
+  void setTranspElt(SoNode * node, int32_t numtransp,
+                    const float * transp, SoColorPacker * packer) override;
 
   void setTranspTypeElt(int32_t type) override;
   void setAmbientElt(const SbColor* color) override;
@@ -117,15 +117,15 @@ public:
   void enableBlendingElt(int sfactor, int dfactor, int alpha_sfactor, int alpha_dfactor) override;
   void disableBlendingElt(void) override;
   void setLightModelElt(SoState *state, int32_t model) override;
-  virtual void setMaterialElt(SoNode * node, uint32_t bitmask,
-                              SoColorPacker * packer,
-                              const SbColor * diffuse, const int numdiffuse,
-                              const float * transp, const int numtransp,
-                              const SbColor & ambient,
-                              const SbColor & emissive,
-                              const SbColor & specular,
-                              const float shininess,
-                              const SbBool istransparent) override;
+  void setMaterialElt(SoNode * node, uint32_t bitmask,
+                      SoColorPacker * packer,
+                      const SbColor * diffuse, const int numdiffuse,
+                      const float * transp, const int numtransp,
+                      const SbColor & ambient,
+                      const SbColor & emissive,
+                      const SbColor & specular,
+                      const float shininess,
+                      const SbBool istransparent) override;
   void setVertexOrderingElt(VertexOrdering ordering) override;
   void setBackfaceCullingElt(SbBool onoff) override;
   void setTwosideLightingElt(SbBool onoff) override;

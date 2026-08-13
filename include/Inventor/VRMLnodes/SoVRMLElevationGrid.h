@@ -79,8 +79,8 @@ protected:
 
   void notify(SoNotList * list) override;
   void generatePrimitives( SoAction * action ) override;
-  virtual void computeBBox(SoAction * action, SbBox3f & bbox,
-                           SbVec3f & center) override;
+  void computeBBox(SoAction * action, SbBox3f & bbox,
+                   SbVec3f & center) override;
 
 private:
   friend class SoVRMLElevationGridP;

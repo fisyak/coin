@@ -63,10 +63,10 @@ protected:
 
   void generatePrimitives(SoAction * action) override;
   void computeBBox(SoAction * action, SbBox3f & box, SbVec3f & center) override;
-  virtual SoDetail * createLineSegmentDetail(SoRayPickAction * action,
-                                             const SoPrimitiveVertex * v1,
-                                             const SoPrimitiveVertex * v2,
-                                             SoPickedPoint * pp) override;
+  SoDetail * createLineSegmentDetail(SoRayPickAction * action,
+                                     const SoPrimitiveVertex * v1,
+                                     const SoPrimitiveVertex * v2,
+                                     SoPickedPoint * pp) override;
 private:
   class SoNurbsCurveP * pimpl;
   friend class SoNurbsCurveP;

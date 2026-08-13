@@ -46,13 +46,11 @@ protected:
 
 public:
   void init(SoState * state) override;
-  virtual void pop(SoState * state,
-                   const SoElement * prevTopElement) override;
+  void pop(SoState * state, const SoElement * prevTopElement) override;
   static  int getMaxGLPlanes(void);
 
 protected:
-  virtual void addToElt(const SbPlane & plane,
-                        const SbMatrix & modelMatrix) override;
+  void addToElt(const SbPlane & plane, const SbMatrix & modelMatrix) override;
 
 private:
 };

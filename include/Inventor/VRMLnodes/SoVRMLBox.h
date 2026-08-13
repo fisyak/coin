@@ -50,14 +50,14 @@ public:
 
   void GLRender(SoGLRenderAction * action) override;
   void rayPick(SoRayPickAction * action) override;
-  void getPrimitiveCount( SoGetPrimitiveCountAction * action ) override;
+  void getPrimitiveCount(SoGetPrimitiveCountAction * action) override;
 
 protected:
   virtual ~SoVRMLBox();
 
-  void generatePrimitives( SoAction * action ) override;
-  virtual void computeBBox( SoAction * action, SbBox3f & box,
-                            SbVec3f & center ) override;
+  void generatePrimitives(SoAction * action) override;
+  void computeBBox(SoAction * action, SbBox3f & box,
+                   SbVec3f & center) override;
 }; // class SoVRMLBox
 
 #endif // ! COIN_SOVRMLBOX_H

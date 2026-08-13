@@ -48,8 +48,7 @@ public:
   void init(SoState * state) override;
 
   void push(SoState * state) override;
-  virtual void pop(SoState * state,
-                   const SoElement * prevTopElement) override;
+  void pop(SoState * state, const SoElement * prevTopElement) override;
 
   static void forceSend(SoState * const state, const SbBool twoside);
   static void forceSend(SoState * const state,
@@ -58,8 +57,8 @@ public:
                         const SbBool cull, const SbBool twoside);
 
 protected:
-  virtual void setElt(VertexOrdering vertexOrdering,
-                      ShapeType shapeType, FaceType faceType) override;
+  void setElt(VertexOrdering vertexOrdering,
+              ShapeType shapeType, FaceType faceType) override;
 private:
   SoState * state;
 };

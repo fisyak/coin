@@ -115,8 +115,8 @@ protected:
   static const SoNodekitCatalog ** getClassNodekitCatalogPtr(void);
 
   SoNode * addToCopyDict(void) const override;
-  virtual void copyContents(const SoFieldContainer * fromfc,
-                            SbBool copyconnections) override;
+  void copyContents(const SoFieldContainer * fromfc,
+                    SbBool copyconnections) override;
 
   SoGroup * getContainerNode(const SbName & listname,
                              SbBool makeifneeded = TRUE);

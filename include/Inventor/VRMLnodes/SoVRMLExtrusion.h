@@ -63,8 +63,8 @@ public:
 
   void GLRender(SoGLRenderAction * action) override;
   void getPrimitiveCount(SoGetPrimitiveCountAction * action) override;
-  virtual void computeBBox(SoAction * action,
-                           SbBox3f & bbox, SbVec3f & center) override;
+  void computeBBox(SoAction * action,
+                   SbBox3f & bbox, SbVec3f & center) override;
 
 protected:
   virtual ~SoVRMLExtrusion();
@@ -72,11 +72,11 @@ protected:
   void notify(SoNotList * list) override;
   void generatePrimitives( SoAction * action ) override;
 
-  virtual SoDetail * createTriangleDetail(SoRayPickAction * action,
-                                          const SoPrimitiveVertex * v1,
-                                          const SoPrimitiveVertex * v2,
-                                          const SoPrimitiveVertex * v3,
-                                          SoPickedPoint * pp) override;
+  SoDetail * createTriangleDetail(SoRayPickAction * action,
+                                  const SoPrimitiveVertex * v1,
+                                  const SoPrimitiveVertex * v2,
+                                  const SoPrimitiveVertex * v3,
+                                  SoPickedPoint * pp) override;
 private:
   void updateCache(void);
   class SoVRMLExtrusionP * pimpl;

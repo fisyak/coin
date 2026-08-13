@@ -82,12 +82,12 @@ public:
   SoChildList * getChildren(void) const override;
 
 protected:
-  ~SoNodeKitListPart() override;
+  virtual ~SoNodeKitListPart();
 
   SoGroup * getContainerNode(void);
   SbBool readInstance(SoInput * in, unsigned short flags) override;
   void copyContents(const SoFieldContainer * fromFC,
-                            SbBool copyConnections) override;
+                    SbBool copyConnections) override;
   SoChildList * children;
 
 private:

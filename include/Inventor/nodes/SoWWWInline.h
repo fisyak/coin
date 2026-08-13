@@ -117,8 +117,8 @@ protected:
 
   virtual void addBoundingBoxChild(SbVec3f center, SbVec3f size);
   SbBool readInstance(SoInput * in, unsigned short flags) override;
-  virtual void copyContents(const SoFieldContainer * fromfC,
-                            SbBool copyconnections) override;
+  void copyContents(const SoFieldContainer * fromfC,
+                    SbBool copyconnections) override;
 
 private:
   friend class SoWWWInlineP;

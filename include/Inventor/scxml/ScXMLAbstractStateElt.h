@@ -46,7 +46,7 @@ public:
   static void cleanClass(void);
 
   ScXMLAbstractStateElt(void);
-  ~ScXMLAbstractStateElt(void) override;
+  virtual ~ScXMLAbstractStateElt(void);
 
   // XML attributes
   virtual void setIdAttribute(const char * id);

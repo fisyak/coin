@@ -46,19 +46,18 @@ protected:
 
 public:
   void init(SoState * state) override;
-  virtual void pop(SoState * state,
-                   const SoElement * prevTopElement) override;
+  void pop(SoState * state, const SoElement * prevTopElement) override;
 
 protected:
+  void setElt(SoState * const state,
+              const float ambientIntensity,
+              const SbColor & ambientColor,
+              const SbVec3f & attenuation,
+              const int32_t fogType,
+              const SbColor & fogColor,
+              const float fogVisibility,
+              const float fogStart) override;
 
-  virtual void setElt(SoState * const state,
-                      const float ambientIntensity,
-                      const SbColor & ambientColor,
-                      const SbVec3f & attenuation,
-                      const int32_t fogType,
-                      const SbColor & fogColor,
-                      const float fogVisibility,
-                      const float fogStart) override;
 private:
   void updategl(SoState * const state);
 };

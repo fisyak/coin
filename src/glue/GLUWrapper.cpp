@@ -369,8 +369,8 @@ GLUWrapper(void)
 
 #ifndef GLU_IS_PART_OF_GL
 
-    /* FIXME: should we get the system shared library name from an
-       Autoconf check? 20000930 mortene. */
+    /* FIXME: should we get the system shared library name from a
+       build-configuration check? 20000930 mortene. */
     const char * possiblelibnames[] = {
       NULL, /* is set below */
       /* Microsoft Windows DLL name for the GLU library */

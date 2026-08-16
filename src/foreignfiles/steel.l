@@ -553,8 +553,7 @@ stl_steel_micro(void)
 }
 
 /* @stl_steel_abi_version@
-This function returns the version of the steel library ABI.  It is the same
-as the libtool "current" number.
+This function returns the version of the steel library ABI.
  */
 
 int
@@ -565,7 +564,7 @@ stl_steel_abi_version(void)
 
 /* @stl_steel_abi_revision@
 This function returns the revision of the current steel library ABI version.
-It is the same as the libtool "revision" number.
+It identifies the revision of the current steel library ABI version.
  */
 
 int
@@ -576,7 +575,7 @@ stl_steel_abi_revision(void)
 
 /* @stl_steel_abi_age@
 This function returns the age of the current steel library ABI.
-It is essentially the same as the libtool "age" number.
+It identifies the number of previous ABI versions supported by the library.
  */
 
 int

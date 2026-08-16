@@ -44,9 +44,6 @@
 #include <config.h>
 #endif // HAVE_CONFIG_H
 
-// FIXME: is this really necessary? Coin/src/Makefile.am stops
-// traversal into src/vrml97/, so it seems
-// superfluous. Investigate. 20050526 mortene.
 #ifdef HAVE_VRML97
 
 // *************************************************************************

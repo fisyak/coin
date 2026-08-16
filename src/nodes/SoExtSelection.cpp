@@ -44,7 +44,7 @@
   complex, due to its non-trivial functionality. To see an \e
   extensive usage example of the SoExtSelection node, we advise you to
   go look at the "extselection" example application in the "nodes/"
-  directory of the SoGuiExamples Mercurial repository. Further information and
+  directory of the SoGuiExamples Git repository. Further information and
   links for downloading and building this module should be available at <a
   href="https://github.com/coin3d/soguiexamples">github.com/coin3d/soguiexamples</a>.
 

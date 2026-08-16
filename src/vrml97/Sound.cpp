@@ -512,8 +512,8 @@ SoVRMLSound::SoVRMLSound(void)
     SoDebugError::postWarning("SoVRMLSound::SoVRMLSound",
       "You are using a SoVRMLSound node, but this version of Coin was built "
       "without sound support. If you'd like to have sound support in Coin, "
-      "please reconfigure and rebuild the Coin library without specifying "
-      "--disable-sound or --disable-vrml on the configure command line.");
+      "please reconfigure and rebuild the Coin library with "
+      "-DHAVE_SOUND=ON and -DHAVE_VRML97=ON.");
     warningprintedonce = TRUE;
   }
 #endif // !HAVE_SOUND

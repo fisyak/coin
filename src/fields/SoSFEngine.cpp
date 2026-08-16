@@ -55,9 +55,7 @@
 
 */
 
-// Type-specific define to be able to do #ifdef tests on type.  (Note:
-// used to check the header file wrapper define, but that doesn't work
-// with --enable-compact build.)
+// Type-specific define to be able to do #ifdef tests on type.
 #define COIN_INTERNAL_SOSFENGINE
 
 #include <Inventor/fields/SoSFEngine.h>

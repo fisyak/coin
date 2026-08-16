@@ -710,10 +710,10 @@ cc_dl_open(const char * filename)
 #elif defined (HAVE_DLD_LIB)
 
   /* FIXME: there is a good reason to try to use shn_load() *first*,
-     then dlopen() on HP-UX: according to a discussion on the libtool
-     mailinglist, dlopen() for HP-UX was buggy in an official release,
+     then dlopen() on HP-UX: according to a discussion on the HP-UX
+     development mailing list, dlopen() for HP-UX was buggy in an official release,
      needing a patch to function properly. This would take some
-     changes to the configure checks (we cut off further checking if
+     changes to the platform checks (we cut off further checking if
      libdl is found), and any code that depends on _either_
      HAVE_DL_LIB _or_ HAVE_DLD_LIB being defined, but not both at the
      same time.  20010626 mortene. */
@@ -1001,15 +1001,6 @@ cc_dl_coin_handle(void)
     void * func = cc_dl_sym(hnd, "cc_dl_open");
     /* (instead of "cc_dl_open", we could use any other function in
        the public API) */
-
-    if (func == NULL) {
-      /* in case we're using the --enable-linkhack dev hack */
-      cc_libhandle gluehnd = cc_dl_open("libglueLINKHACK" DYNAMIC_LIBRARY_EXTENSION);
-      if (gluehnd) {
-        func = cc_dl_sym(gluehnd, "cc_dl_open");
-        cc_dl_close(gluehnd);
-      }
-    }
 
     if (func) {
       if (func == cc_dl_open) { return hnd; }

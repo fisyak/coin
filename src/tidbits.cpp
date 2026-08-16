@@ -139,7 +139,7 @@
    20021128 mortene.
 
    UPDATE 20021206 mortene: it looks like integrating any of these
-   would be quite some effort, to get the build / configure stuff
+   would be quite some effort, to get the build configuration
    correct, to slim down the code of the chosen implementation, etc
    etc. I think our first step should perhaps be to let configure bail
    out if no "native" snprintf() is found on the system, with a good
@@ -337,8 +337,8 @@ coin_vsnprintf(char * dst, unsigned int n, const char * fmtstr, va_list args)
   popping up in the root directory (on windows computers, and on the
   current drive) with names like "s3n4" and "s25o" etc. with just a
   few characters of text in them.  It turned out to be this fallback
-  that created them, and I had forgotten to use the SIM_AC_CHECK_NPRINTF
-  macro in the configure script.  The fallback is in other words not
+  that created them, and I had forgotten to use the corresponding build
+  configuration check.  The fallback is in other words not
   entirely "safe", since it pollutes the filesystem on windows computers.
 */
 
